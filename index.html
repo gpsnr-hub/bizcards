@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPSNR - Sustainability NGO Business Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a6b3a 0%, #0f4620 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #1a6b3a 0%, #0f4620 100%);
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background: #c9a84c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: #1a6b3a;
+            box-shadow: 0 5px 15px rgba(201, 168, 76, 0.4);
+        }
+
+        .company-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            opacity: 0.9;
+            font-style: italic;
+            color: #c9a84c;
+        }
+
+        .card-body {
+            padding: 30px 20px;
+        }
+
+        .staff-info {
+            margin-bottom: 25px;
+        }
+
+        .staff-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a6b3a;
+            margin-bottom: 5px;
+        }
+
+        .staff-title {
+            font-size: 14px;
+            color: #c9a84c;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-section {
+            margin: 20px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .contact-icon {
+            width: 30px;
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: #1a6b3a;
+            font-weight: bold;
+        }
+
+        .contact-link {
+            color: #1a6b3a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #c9a84c;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+            justify-content: center;
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 140px;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1a6b3a 0%, #0f4620 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(26, 107, 58, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #1a6b3a;
+            border: 2px solid #1a6b3a;
+        }
+
+        .btn-secondary:hover {
+            background: #1a6b3a;
+            color: white;
+        }
+
+        .btn-gold {
+            background: #c9a84c;
+            color: white;
+        }
+
+        .btn-gold:hover {
+            background: #b8961f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(201, 168, 76, 0.3);
+        }
+
+        .qr-section {
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .qr-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .qr-code {
+            display: inline-block;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .qr-code img {
+            display: block;
+            width: 150px;
+            height: 150px;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 20px 0;
+        }
+
+        .linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #0077b5;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        .linkedin-btn:hover {
+            background: #005a87;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 119, 181, 0.3);
+        }
+
+        .card-footer {
+            background: #f9f9f9;
+            padding: 15px 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            font-size: 11px;
+            color: #999;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                max-width: 100%;
+            }
+
+            .card-header {
+                padding: 25px 15px;
+            }
+
+            .company-name {
+                font-size: 24px;
+            }
+
+            .staff-name {
+                font-size: 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .qr-code img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a6b3a;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            z-index: 1000;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- Header with Logo -->
+        <div class="card-header">
+            <div class="logo">🌱</div>
+            <h1 class="company-name">GPSNR</h1>
+            <p class="tagline">Building a Sustainable Future Together</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="card-body">
+            <!-- Staff Information -->
+            <div class="staff-info">
+                <div class="staff-name">Alex Johnson</div>
+                <div class="staff-title">Sustainability Director</div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <a href="mailto:alex.johnson@gpsnr.org" class="contact-link">alex.johnson@gpsnr.org</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <a href="tel:+14155552671" class="contact-link">+1 (415) 555-2671</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <a href="https://www.gpsnr.org" class="contact-link" target="_blank">www.gpsnr.org</a>
+                </div>
+            </div>
+
+            <!-- LinkedIn Button -->
+            <div style="text-align: center; margin: 20px 0;">
+                <a href="https://linkedin.com/in/alexjohnson" class="linkedin-btn" target="_blank">
+                    <span>LinkedIn Profile</span>
+                </a>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- QR Code Section -->
+            <div class="qr-section">
+                <div class="qr-label">Scan to View Full Card</div>
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.gpsnr.org" alt="QR Code to GPSNR Website">
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="downloadVCard()">
+                    📥 Download vCard
+                </button>
+                <button class="btn btn-gold" onclick="shareCard()">
+                    📤 Share
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="card-footer">
+            <p>© 2026 GPSNR Sustainability NGO. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // vCard Download Function
+        function downloadVCard() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Alex Johnson
+TITLE:Sustainability Director
+ORG:GPSNR
+EMAIL:alex.johnson@gpsnr.org
+TEL:+14155552671
+URL:https://www.gpsnr.org
+NOTE:Building a Sustainable Future Together
+END:VCARD`;
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(vcard));
+            element.setAttribute('download', 'GPSNR_Alex_Johnson.vcf');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+            
+            showToast('vCard downloaded successfully!');
+        }
+
+        // Share Function
+        function shareCard() {
+            const shareData = {
+                title: 'GPSNR - Sustainability NGO',
+                text: 'Check out my digital business card from GPSNR - Building a Sustainable Future Together',
+                url: 'https://www.gpsnr.org'
+            };
+
+            if (navigator.share) {
+                navigator.share(shareData).catch(err => console.error('Error sharing:', err));
+            } else {
+                // Fallback: Copy to clipboard
+                const text = `${shareData.text}\n${shareData.url}`;
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast('Copied to clipboard!');
+                }).catch(err => {
+                    alert('Share failed. Please try again.');
+                });
+            }
+        }
+
+        // Toast Notification
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'slideUp 0.3s ease-out reverse';
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
