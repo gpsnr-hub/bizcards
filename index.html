@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPSNR - Sustainability NGO Business Card</title>
+    <title>GPSNR - Digital Business Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,8 +13,8 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a6b3a 0%, #0f4620 100%);
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #3FB281 0%, #427D70 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -43,61 +44,68 @@
         }
 
         .card-header {
-            background: linear-gradient(135deg, #1a6b3a 0%, #0f4620 100%);
-            padding: 30px 20px;
+            background: linear-gradient(135deg, #3FB281 0%, #427D70 100%);
+            padding: 40px 20px 30px;
             text-align: center;
             color: white;
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 15px;
-            background: #c9a84c;
-            border-radius: 50%;
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 24px;
-            color: #1a6b3a;
-            box-shadow: 0 5px 15px rgba(201, 168, 76, 0.4);
         }
 
-        .company-name {
-            font-size: 28px;
-            font-weight: bold;
-            margin: 10px 0 5px;
-            letter-spacing: 0.5px;
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
         }
 
         .tagline {
-            font-size: 13px;
-            opacity: 0.9;
-            font-style: italic;
-            color: #c9a84c;
+            font-size: 6pt;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            opacity: 0.95;
+            margin-bottom: 10px;
         }
 
         .card-body {
             padding: 30px 20px;
         }
 
-        .staff-info {
-            margin-bottom: 25px;
-        }
-
         .staff-name {
-            font-size: 22px;
-            font-weight: bold;
-            color: #1a6b3a;
+            font-size: 15pt;
+            font-weight: 800;
+            color: #3FB281;
             margin-bottom: 5px;
+            letter-spacing: 0.3px;
         }
 
         .staff-title {
-            font-size: 14px;
-            color: #c9a84c;
+            font-size: 10pt;
+            font-weight: 500;
+            color: #427D70;
+            margin-bottom: 20px;
+            letter-spacing: 0.2px;
+        }
+
+        .bio {
+            font-size: 7pt;
             font-weight: 600;
-            margin-bottom: 15px;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .divider {
+            height: 2px;
+            background: #A2CDBD;
+            margin: 20px 0;
         }
 
         .contact-section {
@@ -106,33 +114,52 @@
 
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin: 12px 0;
-            font-size: 14px;
+            font-size: 7pt;
             color: #333;
         }
 
         .contact-icon {
-            width: 30px;
-            height: 30px;
-            background: #f0f0f0;
+            width: 24px;
+            height: 24px;
+            background: #A2CDBD;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 12px;
-            color: #1a6b3a;
+            color: white;
             font-weight: bold;
+            flex-shrink: 0;
+            font-size: 12px;
+        }
+
+        .contact-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .contact-label {
+            font-size: 6pt;
+            font-weight: 800;
+            color: #427D70;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .contact-link {
-            color: #1a6b3a;
+            color: #3FB281;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 7pt;
+            font-weight: 500;
         }
 
         .contact-link:hover {
-            color: #c9a84c;
+            color: #427D70;
+            text-decoration: underline;
         }
 
         .button-group {
@@ -145,11 +172,11 @@
 
         .btn {
             flex: 1;
-            min-width: 140px;
+            min-width: 130px;
             padding: 12px 15px;
             border: none;
             border-radius: 8px;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
@@ -160,38 +187,29 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #1a6b3a 0%, #0f4620 100%);
+            background: linear-gradient(135deg, #3FB281 0%, #427D70 100%);
             color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(26, 107, 58, 0.3);
+            box-shadow: 0 10px 25px rgba(63, 178, 129, 0.4);
         }
 
         .btn-secondary {
-            background: #f0f0f0;
-            color: #1a6b3a;
-            border: 2px solid #1a6b3a;
+            background: white;
+            color: #3FB281;
+            border: 2px solid #3FB281;
         }
 
         .btn-secondary:hover {
-            background: #1a6b3a;
+            background: #A2CDBD;
             color: white;
-        }
-
-        .btn-gold {
-            background: #c9a84c;
-            color: white;
-        }
-
-        .btn-gold:hover {
-            background: #b8961f;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(201, 168, 76, 0.3);
+            border-color: #A2CDBD;
         }
 
         .qr-section {
@@ -203,10 +221,12 @@
         }
 
         .qr-label {
-            font-size: 12px;
-            color: #666;
+            font-size: 6pt;
+            font-weight: 800;
+            color: #427D70;
             margin-bottom: 10px;
-            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .qr-code {
@@ -214,7 +234,7 @@
             padding: 10px;
             background: white;
             border-radius: 8px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #A2CDBD;
         }
 
         .qr-code img {
@@ -223,40 +243,14 @@
             height: 150px;
         }
 
-        .divider {
-            height: 1px;
-            background: #e0e0e0;
-            margin: 20px 0;
-        }
-
-        .linkedin-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 10px 20px;
-            background: #0077b5;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 13px;
-            transition: all 0.3s ease;
-        }
-
-        .linkedin-btn:hover {
-            background: #005a87;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 119, 181, 0.3);
-        }
-
         .card-footer {
             background: #f9f9f9;
             padding: 15px 20px;
             text-align: center;
-            border-top: 1px solid #e0e0e0;
-            font-size: 11px;
-            color: #999;
+            border-top: 2px solid #A2CDBD;
+            font-size: 8px;
+            color: #427D70;
+            font-weight: 600;
         }
 
         @media (max-width: 600px) {
@@ -265,15 +259,15 @@
             }
 
             .card-header {
-                padding: 25px 15px;
+                padding: 25px 15px 20px;
             }
 
-            .company-name {
-                font-size: 24px;
+            .logo {
+                max-width: 240px;
             }
 
             .staff-name {
-                font-size: 20px;
+                font-size: 13pt;
             }
 
             .button-group {
@@ -296,12 +290,15 @@
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
-            background: #1a6b3a;
+            background: #3FB281;
             color: white;
             padding: 15px 25px;
             border-radius: 8px;
             z-index: 1000;
             animation: slideUp 0.3s ease-out;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
         }
 
         @keyframes slideUp {
@@ -320,40 +317,60 @@
     <div class="card">
         <!-- Header with Logo -->
         <div class="card-header">
-            <div class="logo">🌱</div>
-            <h1 class="company-name">GPSNR</h1>
-            <p class="tagline">Building a Sustainable Future Together</p>
+            <div class="logo">
+                <img src="https://sustainablenaturalrubber.org/wp-content/uploads/2026/02/Logo-GPSNR_white.png" alt="GPSNR Logo">
+            </div>
+            <p class="tagline">Global Platform for Sustainable Natural Rubber</p>
         </div>
 
         <!-- Main Content -->
         <div class="card-body">
             <!-- Staff Information -->
             <div class="staff-info">
-                <div class="staff-name">Alex Johnson</div>
-                <div class="staff-title">Sustainability Director</div>
+                <div class="staff-name">Bani Bains</div>
+                <div class="staff-title">Communications Director</div>
             </div>
+
+            <!-- Bio -->
+            <div class="bio">
+                I am passionate about communicating and advocating for environmentalism, feminism, minority rights and their intersectionality.
+                <br><br>
+
+In my current role at the Global Platform for Sustainable Natural Rubber (GPSNR), I use innovative communications approaches to create a sustainable natural rubber value chain. In the past, I have used social media and digital strategy for environmental policy change with WWF across offices in India and Singapore. 
+            </div>
+
+            <div class="divider"></div>
 
             <!-- Contact Information -->
             <div class="contact-section">
                 <div class="contact-item">
                     <div class="contact-icon">✉</div>
-                    <a href="mailto:alex.johnson@gpsnr.org" class="contact-link">alex.johnson@gpsnr.org</a>
+                    <div class="contact-text">
+                        <div class="contact-label">Email</div>
+                        <a href="mailto:alex.johnson@gpsnr.org" class="contact-link">bani.bains@gpsnr.org</a>
+                    </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
-                    <a href="tel:+14155552671" class="contact-link">+1 (415) 555-2671</a>
+                    <div class="contact-text">
+                        <div class="contact-label">Phone</div>
+                        <a href="tel:+14155552671" class="contact-link">+65 XXXX XXX</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🔗</div>
+                    <div class="contact-text">
+                        <div class="contact-label">LinkedIn</div>
+                        <a href="https://linkedin.com/in/alexjohnson" class="contact-link" target="_blank">linkedin.com/in/bani-bains</a>
+                    </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">🌐</div>
-                    <a href="https://www.gpsnr.org" class="contact-link" target="_blank">www.gpsnr.org</a>
+                    <div class="contact-text">
+                        <div class="contact-label">Website</div>
+                        <a href="https://www.gpsnr.org" class="contact-link" target="_blank">www.gpsnr.org</a>
+                    </div>
                 </div>
-            </div>
-
-            <!-- LinkedIn Button -->
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="https://linkedin.com/in/alexjohnson" class="linkedin-btn" target="_blank">
-                    <span>LinkedIn Profile</span>
-                </a>
             </div>
 
             <div class="divider"></div>
@@ -371,7 +388,7 @@
                 <button class="btn btn-primary" onclick="downloadVCard()">
                     📥 Download vCard
                 </button>
-                <button class="btn btn-gold" onclick="shareCard()">
+                <button class="btn btn-secondary" onclick="shareCard()">
                     📤 Share
                 </button>
             </div>
@@ -379,7 +396,7 @@
 
         <!-- Footer -->
         <div class="card-footer">
-            <p>© 2026 GPSNR Sustainability NGO. All rights reserved.</p>
+            <p>© 2026 GPSNR - Global Platform for Sustainable Natural Rubber</p>
         </div>
     </div>
 
@@ -388,13 +405,13 @@
         function downloadVCard() {
             const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:Alex Johnson
+FN:Alex
 TITLE:Sustainability Director
 ORG:GPSNR
 EMAIL:alex.johnson@gpsnr.org
 TEL:+14155552671
 URL:https://www.gpsnr.org
-NOTE:Building a Sustainable Future Together
+NOTE:Dedicated sustainability professional with over 10 years of experience in environmental conservation
 END:VCARD`;
 
             const element = document.createElement('a');
@@ -411,7 +428,7 @@ END:VCARD`;
         // Share Function
         function shareCard() {
             const shareData = {
-                title: 'GPSNR - Sustainability NGO',
+                title: 'GPSNR - Global Platform for Sustainable Natural Rubber',
                 text: 'Check out my digital business card from GPSNR - Building a Sustainable Future Together',
                 url: 'https://www.gpsnr.org'
             };
