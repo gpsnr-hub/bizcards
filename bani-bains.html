@@ -108,8 +108,16 @@
             margin: 20px 0;
         }
 
-        .contact-section {
+        .contact-and-qr-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
             margin: 20px 0;
+            align-items: flex-start;
+        }
+
+        .contact-section {
+            flex: 1;
         }
 
         .contact-item {
@@ -162,6 +170,24 @@
             text-decoration: underline;
         }
 
+        .qr-container {
+            flex-shrink: 0;
+        }
+
+        .qr-code {
+            display: inline-block;
+            padding: 8px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #A2CDBD;
+        }
+
+        .qr-code img {
+            display: block;
+            width: 120px;
+            height: 120px;
+        }
+
         .button-group {
             display: flex;
             flex-wrap: wrap;
@@ -212,37 +238,6 @@
             border-color: #A2CDBD;
         }
 
-        .qr-section {
-            text-align: center;
-            margin: 25px 0;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 10px;
-        }
-
-        .qr-label {
-            font-size: 6pt;
-            font-weight: 800;
-            color: #427D70;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .qr-code {
-            display: inline-block;
-            padding: 10px;
-            background: white;
-            border-radius: 8px;
-            border: 2px solid #A2CDBD;
-        }
-
-        .qr-code img {
-            display: block;
-            width: 150px;
-            height: 150px;
-        }
-
         .card-footer {
             background: #f9f9f9;
             padding: 15px 20px;
@@ -270,6 +265,15 @@
                 font-size: 13pt;
             }
 
+            .contact-and-qr-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-section {
+                width: 100%;
+            }
+
             .button-group {
                 flex-direction: column;
             }
@@ -280,8 +284,8 @@
             }
 
             .qr-code img {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
             }
         }
 
@@ -340,47 +344,46 @@ In my current role at the Global Platform for Sustainable Natural Rubber (GPSNR)
 
             <div class="divider"></div>
 
-            <!-- Contact Information -->
-            <div class="contact-section">
-                <div class="contact-item">
-                    <div class="contact-icon">✉</div>
-                    <div class="contact-text">
-                        <div class="contact-label">Email</div>
-                        <a href="mailto:bani.bains@gpsnr.org" class="contact-link">bani.bains@gpsnr.org</a>
+            <!-- Contact Information with QR Code Beside -->
+            <div class="contact-and-qr-container">
+                <div class="contact-section">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+                        <div class="contact-text">
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:bani.bains@gpsnr.org" class="contact-link">bani.bains@gpsnr.org</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">
+                            <div class="contact-label">Phone</div>
+                            <a href="tel:+65XXXXXXX" class="contact-link">+65 XXXX XXX</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🔗</div>
+                        <div class="contact-text">
+                            <div class="contact-label">LinkedIn</div>
+                            <a href="https://linkedin.com/in/bani-bains" class="contact-link" target="_blank">linkedin.com/in/bani-bains</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-text">
+                            <div class="contact-label">Website</div>
+                            <a href="https://www.gpsnr.org" class="contact-link" target="_blank">www.gpsnr.org</a>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-text">
-                        <div class="contact-label">Phone</div>
-                        <a href="tel:+65XXXXXXX" class="contact-link">+65 XXXX XXX</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🔗</div>
-                    <div class="contact-text">
-                        <div class="contact-label">LinkedIn</div>
-                        <a href="https://linkedin.com/in/bani-bains" class="contact-link" target="_blank">linkedin.com/in/bani-bains</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🌐</div>
-                    <div class="contact-text">
-                        <div class="contact-label">Website</div>
-                        <a href="https://www.gpsnr.org" class="contact-link" target="_blank">www.gpsnr.org</a>
+                <div class="qr-container">
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.gpsnr.org" alt="QR Code to GPSNR Website">
                     </div>
                 </div>
             </div>
 
             <div class="divider"></div>
-
-            <!-- QR Code Section -->
-            <div class="qr-section">
-                <div class="qr-label">Scan to View Full Card</div>
-                <div class="qr-code">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.gpsnr.org" alt="QR Code to GPSNR Website">
-                </div>
-            </div>
 
             <!-- Action Buttons -->
             <div class="button-group">
