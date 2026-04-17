@@ -1,1 +1,0 @@
-Now make it so all staff data (name, title, email, phone, LinkedIn, cardUrl) is defined in a single JSON object at the top of the script. I will swap that object per person."
